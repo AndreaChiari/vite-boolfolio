@@ -2,15 +2,29 @@
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppCard from './components/AppCard.vue';
+const apiBaseUrl = 'http://127.0.0.1:8000/api/'
 export default {
   name: 'App',
-  components: { AppHeader, AppCard }
+  components: { AppHeader, AppCard },
+  data: () => ({
+    projects: []
+  }),
+  methods: {
+    fetchProjects() {
+      axios.get(apiBaseUrl + 'projects').then(res => {
+        this.projects = (res.data);
+      })
+    }
+  },
+  created() {
+    this.fetchProjects();
+  }
 }
 </script>
 
 <template>
   <AppHeader></AppHeader>
   <main class="container-fluid">
-    <AppCard></AppCard>
+    <AppCard v-for="project in projects" :projects="projects" :key="project.id"></AppCard>
   </main>
 </template>
