@@ -18,13 +18,15 @@ export default {
   },
   created() {
     this.fetchProjects();
-  }
+  },
 }
 </script>
 
 <template>
   <AppHeader></AppHeader>
-  <main class="container-fluid">
-    <AppCard v-for="project in projects" :projects="projects" :key="project.id"></AppCard>
+  <main class="container">
+    <div class="row">
+      <AppCard v-for="project in projects" :project="project" :key="project.id"></AppCard>
+    </div>
   </main>
 </template>
