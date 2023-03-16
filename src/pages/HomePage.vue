@@ -1,12 +1,11 @@
 <script>
 
 import axios from 'axios';
-import AppHeader from '.././components/AppHeader.vue';
-import AppCard from '.././components/AppCard.vue';
+import AppCard from '../components/AppCard.vue';
 const apiBaseUrl = 'http://127.0.0.1:8000/api/'
 export default {
     name: 'App',
-    components: {},
+    components: { AppCard },
     data: () => ({
         projects: []
     }),
