@@ -4,7 +4,7 @@ import axios from 'axios';
 import AppCard from '../components/AppCard.vue';
 const apiBaseUrl = 'http://127.0.0.1:8000/api/'
 export default {
-    name: 'App',
+    name: 'HomePage',
     components: { AppCard },
     data: () => ({
         projects: []

@@ -13,10 +13,7 @@ export default {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link class="nav-link text-white" href="#" :to="{ name: 'DetailPage' }">Boolfolio</router-link>
-        </li>
-        <li class="nav-item active">
-          <router-link class="nav-link text-white" href="#" :to="{ name: 'home' }">Home</router-link>
+          <router-link class="nav-link text-white" :to="{ name: 'home' }">Home</router-link>
         </li>
       </ul>
     </div>
